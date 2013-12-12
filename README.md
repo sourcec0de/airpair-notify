@@ -25,7 +25,7 @@ It must be properly formatted JSON its parsed using `JSON.parse()`.
     },
     "twitter": {
         "stream": {
-            "track": "@airpair"
+            "track": "@airpair #nodejs #mongodb"
         },
         "credentials": {
             "consumer_key": "YOUR_KEY",
@@ -37,7 +37,9 @@ It must be properly formatted JSON its parsed using `JSON.parse()`.
 }
 ```
 
-`twitter.stream.track` is the phrase that will be tracked by the twitter stream.
+`twitter.stream.track` is the phrase that will be used to filter results in the twitter stream.
+Make this useful. If your only interested in AirPair listings that are for `nodejs` or `ruby`
+be sure to make your track phrase reflect this. `@airpair #nodejs #aws`
 An OSX notifcation will be fired off any time a new tweet comes in from AirPair.
 
 ## USE
