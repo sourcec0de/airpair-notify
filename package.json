@@ -1,7 +1,7 @@
 {
   "name": "airpair-notify",
   "version": "0.0.1",
-  "description": "",
+  "description": "Track airpair notifications from twitter, and make OSX or Linux growl at you!",
   "main": "./bin/airpair-notify",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
