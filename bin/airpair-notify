@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var fs      = require('fs');
+var growl   = require('growl');
+var Twitter = require('twitter');
+var argv    = require('optimist').argv;
+var config  = JSON.parse(fs.readFileSync(argv.file,'utf8'));
+var twitter = new Twitter(config.twitter.credentials);
+
+twitter.stream('statuses/filter', config.twitter.stream, function (stream) {
+    
+    stream.on('data',function (tweet) {
+        
+        if (config.debug) {
+            console.log(tweet.text);
+        }
+
+        growl(tweet.text,config.growl);
+
+    });
+
+});

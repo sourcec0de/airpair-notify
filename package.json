@@ -1,0 +1,27 @@
+{
+  "name": "airpair-notify",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./bin/airpair-notify",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sourcec0de/airpair-notify.git"
+  },
+  "author": "James R. Qualls",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sourcec0de/airpair-notify/issues"
+  },
+  "homepage": "https://github.com/sourcec0de/airpair-notify",
+  "dependencies": {
+    "twitter": "~0.2.5",
+    "growl": "~1.7.0",
+    "optimist": "~0.6.0"
+  },
+  "bin": {
+    "airpair-notify": "./bin/airpair-notify"
+  },
+}
