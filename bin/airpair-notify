@@ -7,6 +7,8 @@ var argv    = require('optimist').argv;
 var config  = JSON.parse(fs.readFileSync(argv.file,'utf8'));
 var twitter = new Twitter(config.twitter.credentials);
 
+growl('now watching tweets',{title:'airpair-notify'});
+
 twitter.stream('statuses/filter', config.twitter.stream, function (stream) {
     
     stream.on('data',function (tweet) {
